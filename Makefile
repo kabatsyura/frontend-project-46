@@ -1,5 +1,5 @@
 install:
-	npm cis
+	npm ci
 
 gendiff:
 	node ./bin/gendiff.js

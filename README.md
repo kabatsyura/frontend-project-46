@@ -15,9 +15,19 @@
 git clone https://github.com/kabatsyura/frontend-project-46.git
 
 ```
+Далее, переходите в склонированную папку и устанавливаете npm.
+
+```
+make install
+
+```
 
 ### Поэтапное развитие проекта.
 
 #### Шаг 2. Работа над CLI проекта. Первые выводы в терминал
 
-https://asciinema.org/a/x2mtnG3iX3XE6n293czYqeVcz
+[![asciicast](https://asciinema.org/a/x2mtnG3iX3XE6n293czYqeVcz.svg)](https://asciinema.org/a/x2mtnG3iX3XE6n293czYqeVcz)
+
+#### Шаг 3. Пробуем выводить содержимое файла
+
+[![asciicast](https://asciinema.org/a/BSrDUqIKzanAhvbsbc5TD72JP.svg)](https://asciinema.org/a/BSrDUqIKzanAhvbsbc5TD72JP)
