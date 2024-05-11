@@ -31,3 +31,7 @@ make install
 #### Шаг 3. Пробуем выводить содержимое файла
 
 [![asciicast](https://asciinema.org/a/BSrDUqIKzanAhvbsbc5TD72JP.svg)](https://asciinema.org/a/BSrDUqIKzanAhvbsbc5TD72JP)
+
+#### Шаг 4. Наше первое сравнение файлов между собой
+
+[![asciicast](https://asciinema.org/a/GbL9iBwX5WcoNGrYCBA6eYewR.svg)](https://asciinema.org/a/GbL9iBwX5WcoNGrYCBA6eYewR)
