@@ -15,3 +15,9 @@
 git clone https://github.com/kabatsyura/frontend-project-46.git
 
 ```
+
+### Поэтапное развитие проекта.
+
+#### Шаг 2. Работа над CLI проекта. Первые выводы в терминал
+
+https://asciinema.org/a/x2mtnG3iX3XE6n293czYqeVcz
