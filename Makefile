@@ -4,8 +4,14 @@ install:
 gendiff:
 	node ./bin/gendiff.js
 
-eslint:
-	npx eslint
+lint:
+	npx eslint .
 
-eslint-fix:
-	npx eslint-fix
+lint-fix:
+	npx eslint --fix .
+
+test:
+	npx jest
+
+test-coverage:
+	npx jest --coverage
