@@ -43,3 +43,7 @@ make install
 #### Шаг 4. Наше первое сравнение файлов между собой
 
 [![asciicast](https://asciinema.org/a/GbL9iBwX5WcoNGrYCBA6eYewR.svg)](https://asciinema.org/a/GbL9iBwX5WcoNGrYCBA6eYewR)
+
+#### Шаг 6. Сравнение 3х типов данных: json, yaml, yml. Тестирование под каждый тип расширения.
+
+[![asciicast](https://asciinema.org/a/HZcoAiUMI2FPIFSCiJFvtgBQP.svg)](https://asciinema.org/a/HZcoAiUMI2FPIFSCiJFvtgBQP)
