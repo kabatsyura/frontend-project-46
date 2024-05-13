@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.resolve(__dirname, '..', '__fixtures__', filename);
 
 describe('gendiff()', () => { // eslint-disable-line
-  test.each([
+  test.each([ // eslint-disable-line
     'yaml',
     'yml',
     'json'
