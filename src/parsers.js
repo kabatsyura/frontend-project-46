@@ -1,14 +1,16 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
+import yaml from 'js-yaml';
 
 const parse = {
-  json: JSON.parse
+  json: JSON.parse,
+  yaml: yaml.load,
+  yml: yaml.load,
 };
 
 const parser = (data, format) => parse[format](data);
 
 // The process.cwd() method returns the current working directory of the Node.js process.
-// eslint-diable-next-line
 export const getPath = (filePath) => path.resolve(process.cwd(), filePath); // eslint-disable-line
 
 // Нахожу расширение файла

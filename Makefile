@@ -13,5 +13,8 @@ lint-fix:
 test:
 	npx jest
 
+test-watch:
+	npm run test -- --watch
+
 test-coverage:
 	npx jest --coverage

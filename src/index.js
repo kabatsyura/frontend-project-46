@@ -1,4 +1,5 @@
 import { getPath, getData } from './parsers.js';
+import showDifference from './showDifference.js';
 import _ from 'lodash';
 
 const genDiff = (filePath1, filePath2) => {
@@ -10,25 +11,7 @@ const genDiff = (filePath1, filePath2) => {
 
   const properties = _.union(Object.keys(dataOfFile1), Object.keys(dataOfFile2)).sort();
 
-  let showDifference = ['{'];
-  for (let property of properties) {
-    if (!Object.hasOwn(dataOfFile2, property)) {
-      showDifference.push(` - ${property}: ${dataOfFile1[property]}`);
-    } else if (!Object.hasOwn(dataOfFile1, property)) {
-      showDifference.push(` + ${property}: ${dataOfFile2[property]}`);
-    } else {
-      if (dataOfFile1[property] === dataOfFile2[property]) {
-        showDifference.push(`   ${property}: ${dataOfFile1[property]}`);
-      } else {
-        showDifference.push(` - ${property}: ${dataOfFile1[property]}`);
-        showDifference.push(` + ${property}: ${dataOfFile2[property]}`);
-      }
-    }
-  }
-
-  showDifference.push('}');
-
-  return showDifference.join('\n');
+  return showDifference(dataOfFile1, dataOfFile2, properties);
 };
 
 export default genDiff;
