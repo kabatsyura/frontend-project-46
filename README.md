@@ -5,7 +5,7 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/e8b1f0f88fcbf4189c04/test_coverage)](https://codeclimate.com/github/kabatsyura/frontend-project-46/test_coverage)
 
-[![Node CI](https://github.com/kabatsyura/frontend-project-46/workflows/Node%20CI/badge.svg)](https://github.com/kabatsyura/frontend-project-46/actions)
+[![Node CI](https://github.com/kabatsyura/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/kabatsyura/frontend-project-46/actions)
 
 # Вычислитель отличий
 
