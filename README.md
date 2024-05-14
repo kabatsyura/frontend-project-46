@@ -47,3 +47,11 @@ make install
 #### Шаг 6. Сравнение 3х типов данных: json, yaml, yml. Тестирование под каждый тип расширения.
 
 [![asciicast](https://asciinema.org/a/HZcoAiUMI2FPIFSCiJFvtgBQP.svg)](https://asciinema.org/a/HZcoAiUMI2FPIFSCiJFvtgBQP)
+
+#### Шаг 7. Сравнение вложенных объектов. Самый сложный этап проекта.
+
+Первым этапом, формировали дерево с типами отличий объектов.
+Следующим этапом, форматировали дерево, исходя из типа отличий как показано на экране.
+Заключительным этапом - написание тестов под новые функции.
+
+[![asciicast](https://asciinema.org/a/Au5vhstsJV2l9Ll3FRmcasERj.svg)](https://asciinema.org/a/Au5vhstsJV2l9Ll3FRmcasERj)

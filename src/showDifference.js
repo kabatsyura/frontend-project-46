@@ -1,23 +1,57 @@
-const showDifference = (dataOfFile1, dataOfFile2, properties) => {
-  let result = ['{'];
-  for (let property of properties) {
-    if (!Object.hasOwn(dataOfFile2, property)) {
-      result.push(` - ${property}: ${dataOfFile1[property]}`);
-    } else if (!Object.hasOwn(dataOfFile1, property)) {
-      result.push(` + ${property}: ${dataOfFile2[property]}`);
-    } else {
-      if (dataOfFile1[property] === dataOfFile2[property]) {
-        result.push(`   ${property}: ${dataOfFile1[property]}`);
-      } else {
-        result.push(` - ${property}: ${dataOfFile1[property]}`);
-        result.push(` + ${property}: ${dataOfFile2[property]}`);
-      }
+import _ from 'lodash';
+
+const buildAST = (dataOfFile1, dataOfFile2) => {
+
+  const properties = _.union(Object.keys(dataOfFile1), Object.keys(dataOfFile2));
+  const sortedProperties = _.sortBy(properties);
+
+  return sortedProperties.map((key) => {
+    if (!Object.hasOwn(dataOfFile1, key)) {
+      return {
+        key,
+        value: dataOfFile2[key],
+        type: 'added',
+      };
     }
-  }
-  
-  result.push('}');
-  
-  return result.join('\n');
+
+    if (!Object.hasOwn(dataOfFile2, key)) {
+      return {
+        key,
+        value: dataOfFile1[key],
+        type: 'removed',
+      };
+    }
+
+    if (_.isEqual(dataOfFile1[key], dataOfFile2[key])) {
+      return {
+        key,
+        value: dataOfFile1[key],
+        type: 'equal',
+      };
+    }
+
+    if (_.isPlainObject(dataOfFile1[key]) && _.isPlainObject(dataOfFile2[key])) {
+      return {
+        key,
+        children: buildAST(dataOfFile1[key], dataOfFile2[key]),
+        type: 'nested',
+      };
+    }
+
+    if (dataOfFile1[key] !== dataOfFile2[key]) {
+      return {
+        key,
+        oldValue: dataOfFile1[key],
+        newValue: dataOfFile2[key],
+        type: 'changed'
+      };
+    }
+  });
 };
+
+const showDifference = (dataOfFile1, dataOfFile2) => ({
+  type: 'root',
+  children: buildAST(dataOfFile1, dataOfFile2)
+})
 
 export default showDifference;
