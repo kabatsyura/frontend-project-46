@@ -1,8 +1,8 @@
 import { getPath, getData } from './parsers.js';
 import showDifference from './showDifference.js';
-import formatter from './formatter/index.js'
+import formatter from './formatter/index.js';
 
-const genDiff = (filePath1, filePath2, format = "stylish") => {
+const genDiff = (filePath1, filePath2, format = 'stylish') => {
   const pathOfFile1 = getPath(filePath1);
   const pathOfFile2 = getPath(filePath2);
 

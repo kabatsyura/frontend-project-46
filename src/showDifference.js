@@ -1,7 +1,6 @@
 import _ from 'lodash';
 
 const buildAST = (dataOfFile1, dataOfFile2) => {
-
   const properties = _.union(Object.keys(dataOfFile1), Object.keys(dataOfFile2));
   const sortedProperties = _.sortBy(properties);
 
@@ -43,7 +42,7 @@ const buildAST = (dataOfFile1, dataOfFile2) => {
         key,
         oldValue: dataOfFile1[key],
         newValue: dataOfFile2[key],
-        type: 'changed'
+        type: 'changed',
       };
     }
   });
@@ -51,7 +50,7 @@ const buildAST = (dataOfFile1, dataOfFile2) => {
 
 const showDifference = (dataOfFile1, dataOfFile2) => ({
   type: 'root',
-  children: buildAST(dataOfFile1, dataOfFile2)
-})
+  children: buildAST(dataOfFile1, dataOfFile2),
+});
 
 export default showDifference;

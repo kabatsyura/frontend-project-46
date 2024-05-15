@@ -1,26 +1,23 @@
 import _ from 'lodash';
 
 function isString(value) {
-  return (typeof value === "string" || value instanceof String);
+  return (typeof value === 'string' || value instanceof String);
 }
 
 const typeConversation = (value) => {
-  let result = '';
   if (_.isObject(value)) {
-    result = Object.is(value, null) ? 'null' : '[complex value]'; 
+    return Object.is(value, null) ? 'null' : '[complex value]'; 
   } else if (isString(value)) {
-    result = `'${value}'`;
+    return `'${value}'`;
   } else {
     return String(value);
   }
-
-  return result;
 }
 
 const buildPlain = (tree) => {
-  const iter = (tree, key = "") => {
-    
-    const ast = tree.flatMap((node) => {
+  const iter = (astTree, key = '') => {
+
+    const ast = astTree.flatMap((node) => {
       const updatedKey = [key, node.key].flat().join('.');
       switch (node.type) {
         case 'nested': 

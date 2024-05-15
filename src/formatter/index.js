@@ -1,14 +1,14 @@
 import buildStylish from './stylish.js';
 import buildPlain from './plain.js';
 
-const formatter = (tree, format = "stylish") => {
+const formatter = (tree, format = 'stylish') => {
   switch (format) {
-    case "stylish":
-      return buildStylish(tree);
-    case "json":
+    case 'json':
       return JSON.stringify(tree);
-    case "plain":
+    case 'plain':
       return buildPlain(tree);
+    default:
+      return buildStylish(tree);
   }
 };
 

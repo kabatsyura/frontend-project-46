@@ -44,6 +44,8 @@ const buildStylish = (tree) => {
       case 'equal': {
         return `${currentPadding(depth)}  ${node.key}: ${stringify(node.value, depth + 1)}`;
       }
+      default:
+        console.log('error!');
     }
   };
   return iter(tree, 1);
