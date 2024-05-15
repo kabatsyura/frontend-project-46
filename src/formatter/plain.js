@@ -39,7 +39,7 @@ const buildPlain = (tree) => {
           console.log('error!');
       }
     });
-    return ast.filter((el) => (typeof el !== "underfined" && el)).join('\n');
+    return ast.filter((el) => (typeof el !== "underfined" && el)).join('\n');  // eslint-disable-line
   }
 
   return iter(tree.children, []);
