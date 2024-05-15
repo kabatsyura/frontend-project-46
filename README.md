@@ -9,6 +9,8 @@
 
 [![Hexlet-check](https://github.com/kabatsyura/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/kabatsyura/frontend-project-46/actions)
 
+--- Русская версия ---
+
 # Вычислитель отличий
 
 ### Описание
@@ -50,8 +52,17 @@ make install
 
 #### Шаг 7. Сравнение вложенных объектов. Самый сложный этап проекта.
 
-Первым этапом, формировали дерево с типами отличий объектов.
-Следующим этапом, форматировали дерево, исходя из типа отличий как показано на экране.
-Заключительным этапом - написание тестов под новые функции.
+**Сделано:**
+Написаны тесты.
+Сформировано дерево с типами отличий объектов.
+Отформатировано дерево, исходя из типа отличий как показано на экране.
 
 [![asciicast](https://asciinema.org/a/Au5vhstsJV2l9Ll3FRmcasERj.svg)](https://asciinema.org/a/Au5vhstsJV2l9Ll3FRmcasERj)
+
+#### Шаг 8. Сравнение вложенных объектов. Самый сложный этап проекта.
+
+**Сделано:**
+Написан тест.
+Отформатировано дерево в формат, где текстом отражены все изменения в файле.
+
+[![asciicast](https://asciinema.org/a/iVDEV9nA49GYkMkfc2H7wFRyf.svg)](https://asciinema.org/a/iVDEV9nA49GYkMkfc2H7wFRyf)
