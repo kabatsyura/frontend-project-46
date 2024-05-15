@@ -4,7 +4,7 @@ const buildAST = (dataOfFile1, dataOfFile2) => {
   const properties = _.union(Object.keys(dataOfFile1), Object.keys(dataOfFile2));
   const sortedProperties = _.sortBy(properties);
 
-  return sortedProperties.map((key) => {
+  return sortedProperties.map((key) => { // eslint-disable-line
     if (!Object.hasOwn(dataOfFile1, key)) {
       return {
         key,

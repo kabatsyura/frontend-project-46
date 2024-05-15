@@ -6,21 +6,20 @@ function isString(value) {
 
 const typeConversation = (value) => {
   if (_.isObject(value)) {
-    return Object.is(value, null) ? 'null' : '[complex value]'; 
+    return Object.is(value, null) ? 'null' : '[complex value]';
   } else if (isString(value)) {
     return `'${value}'`;
-  } else {
-    return String(value);
   }
-}
+
+  return String(value);
+};
 
 const buildPlain = (tree) => {
   const iter = (astTree, key = '') => {
-
-    const ast = astTree.flatMap((node) => {
+    const ast = astTree.flatMap((node) => { // eslint-disable-line
       const updatedKey = [key, node.key].flat().join('.');
       switch (node.type) {
-        case 'nested': 
+        case 'nested':
           return iter(node.children, updatedKey);
         case 'added':
           return `Property '${updatedKey}' was added with value: ${typeConversation(node.value)}`;
@@ -37,7 +36,7 @@ const buildPlain = (tree) => {
       }
     });
     return ast.filter((el) => (typeof el !== "underfined" && el)).join('\n');  // eslint-disable-line
-  }
+  };
 
   return iter(tree.children, []);
 };

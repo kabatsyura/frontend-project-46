@@ -7,7 +7,6 @@ import checkDeepTest from '../__fixtures__/checkDeepTest.js';
 import checkDeepJson from '../__fixtures__/checkDeepJson.js';
 import checkDeepPlain from '../__fixtures__/checkDeepPlain.js';
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -18,7 +17,7 @@ describe('gendiff(). Check a difference between flat objects.', () => { // eslin
     'yaml',
     'yml',
     'json',
-  ])('Test%# %s', (extention) => {  
+  ])('Test%# %s', (extention) => {
     const file1 = getFixturePath(`file1.${extention}`);
     const file2 = getFixturePath(`file2.${extention}`);
     expect(genDiff(file1, file2)).toEqual(checkTest); // eslint-disable-line
@@ -30,7 +29,7 @@ describe('gendiff(). Check a difference between deep objects.', () => { // eslin
     'yaml',
     'yml',
     'json',
-  ])('Test%# %s', (extention) => {  
+  ])('Test%# %s', (extention) => {
     const file1 = getFixturePath(`fileDeepStructure1.${extention}`);
     const file2 = getFixturePath(`fileDeepStructure2.${extention}`);
     expect(genDiff(file1, file2)).toEqual(checkDeepTest); // eslint-disable-line

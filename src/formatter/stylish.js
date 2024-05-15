@@ -21,7 +21,7 @@ const stringify = (data, depth) => {
 };
 
 const buildStylish = (tree) => {
-  const iter = (node, depth) => {
+  const iter = (node, depth) => { // eslint-disable-line
     switch (node.type) {
       case 'root': {
         const result = node.children.flatMap((child) => iter(child, depth));
