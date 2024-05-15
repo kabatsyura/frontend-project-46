@@ -9,6 +9,31 @@
 
 [![Hexlet-check](https://github.com/kabatsyura/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/kabatsyura/frontend-project-46/actions)
 
+# Gendiff()
+
+### Description
+
+**gendiff()** is the program, which compares differences between two files. It's popular task of solving problems, such as showing results of tests or for automatically looking for changes in config files. You can find the same online service here - http://www.jsondiff.com/.
+
+### Setup:  
+
+Setup program by cloning the repository:
+
+```
+git clone https://github.com/kabatsyura/frontend-project-46.git
+
+```
+Then, go to the new folder and install the application:
+
+```
+make install
+
+```
+
+### Demonstration of the application:  
+
+[![asciicast](https://asciinema.org/a/dzkjbg2h59T2RaxYDlRzRqSb1.svg)](https://asciinema.org/a/dzkjbg2h59T2RaxYDlRzRqSb1)
+
 --- Русская версия ---
 
 # Вычислитель отличий
