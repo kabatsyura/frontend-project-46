@@ -7,7 +7,7 @@ function isString(value) {
 const typeConversation = (value) => {
   if (_.isObject(value)) {
     return Object.is(value, null) ? 'null' : '[complex value]';
-  } else if (isString(value)) {
+  } else if (isString(value)) { // eslint-disable-line
     return `'${value}'`;
   }
 
