@@ -7,5 +7,4 @@ const checkTest = `{
   + verbose: true
 }`;
 
- export default checkTest;
- 
+export default checkTest;
